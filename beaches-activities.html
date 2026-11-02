@@ -8,23 +8,73 @@
 </head>
 <body>
   <header>
-    <h1>Southampton, NY</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="beaches-activities.html">Beaches & Activities</a></li>
-        <li><a href="dining-shopping.html">Dining & Shopping</a></li>
-      </ul>
-    </nav>
+    <div class="nav-container">
+      <div class="logo-area">
+        <h1>Southampton Guide</h1>
+        <p>The Hamptons, New York</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="beaches-activities.html" class="active">Beaches & Activities</a></li>
+          <li><a href="dining-shopping.html">Dining & Shopping</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h2>Beaches & Outdoor Leisure</h2>
-    <p>Explore Coopers Beach, bike rentals, and cultural destinations like the Parrish Art Museum.</p>
+  <main class="container">
+    <section class="hero">
+      <h2>Beaches, Nature & Culture</h2>
+      <p>Whether lounging along the rolling Atlantic surf or wandering through iconic East End gallery halls, Southampton balances outdoor beauty with deep creative heritage.</p>
+    </section>
+
+    <h2 class="section-title">Top Coastal & Cultural Spots</h2>
+    <div class="card-grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=80" alt="White sand and rolling waves at Coopers Beach">
+        <div class="card-content">
+          <span class="badge">Premier Beach</span>
+          <h3>Coopers Beach</h3>
+          <p>Consistently ranked among the top public beaches in the country. Known for pristine white quartz sand, historic Meadow Lane mansion views, full bathhouses, and umbrella rentals.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=700&q=80" alt="Modern architectural art gallery exterior">
+        <div class="card-content">
+          <span class="badge">Art & Heritage</span>
+          <h3>Parrish Art Museum</h3>
+          <p>An architectural masterpiece set in Water Mill, highlighting artists who were inspired by the East End's unique natural coastal light, including William Merritt Chase and Fairfield Porter.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=700&q=80" alt="Bicycle resting by a scenic path">
+        <div class="card-content">
+          <span class="badge">Outdoor Leisure</span>
+          <h3>Gin Lane Cycling Loop</h3>
+          <p>A classic, flat 6-mile coastal bike route taking riders past historic shingle-style summer cottages, Southampton Bathing Corporation, and scenic Lake Agawam.</p>
+        </div>
+      </article>
+    </div>
+
+    <section class="info-callout">
+      <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=700&q=80" alt="Sunny beach umbrella by the water">
+      <div class="info-text">
+        <h3>Beach Regulations & Daily Parking</h3>
+        <p>Planning a beach day requires a little preparation during peak seasonal months:</p>
+        <ul>
+          <li><strong>Daily Passes:</strong> Non-resident parking passes are sold on a first-come, first-served basis at the Coopers Beach entrance gate.</li>
+          <li><strong>Lifeguards:</strong> Main lifeguard stations operate daily from 10:00 AM to 5:00 PM between Memorial Day and Labor Day.</li>
+          <li><strong>Walk & Bike Access:</strong> Pedestrians and cyclists can access the beaches freely without vehicle parking permits.</li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Southampton Local Guide</p>
+    <p>&copy; 2026 Southampton Local Guide | Created for WEB 110</p>
   </footer>
 </body>
 </html>

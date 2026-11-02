@@ -8,23 +8,76 @@
 </head>
 <body>
   <header>
-    <h1>Welcome to Southampton, NY</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="beaches-activities.html">Beaches & Activities</a></li>
-        <li><a href="dining-shopping.html">Dining & Shopping</a></li>
-      </ul>
-    </nav>
+    <div class="nav-container">
+      <div class="logo-area">
+        <h1>Southampton Guide</h1>
+        <p>The Hamptons, New York</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="beaches-activities.html">Beaches & Activities</a></li>
+          <li><a href="dining-shopping.html">Dining & Shopping</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h2>Discover the Village</h2>
-    <p>A classic East End retreat known for ocean beaches, historic charm, and vibrant village life.</p>
+  <main class="container">
+    <section class="hero">
+      <h2>Your Premier Weekend Escape</h2>
+      <p>Discover historic ocean estates, pristine Atlantic sands, cultural institutions, and world-class village dining on Long Island's East End.</p>
+    </section>
+
+    <h2 class="section-title">Explore by Category</h2>
+    <div class="card-grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=80" alt="Scenic Atlantic oceanfront sand dunes">
+        <div class="card-content">
+          <span class="badge">Outdoors</span>
+          <h3>Beaches & Recreation</h3>
+          <p>From nationally acclaimed Coopers Beach to scenic coastal cycling routes, find the best sun and shorelines.</p>
+          <a href="beaches-activities.html">View Beaches &rarr;</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=700&q=80" alt="Contemporary art museum gallery exhibit">
+        <div class="card-content">
+          <span class="badge">Culture</span>
+          <h3>Arts & History</h3>
+          <p>Explore world-class open-air exhibits at the Parrish Art Museum and the historic heart of Southampton Village.</p>
+          <a href="beaches-activities.html">Explore Culture &rarr;</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=700&q=80" alt="Inviting village bistro dining table">
+        <div class="card-content">
+          <span class="badge">Cuisine</span>
+          <h3>Dining & Village Strolls</h3>
+          <p>Sample fresh Atlantic seafood, famous bakeries like Tate's, and upscale boutiques along Jobs Lane.</p>
+          <a href="dining-shopping.html">Plan Dining &rarr;</a>
+        </div>
+      </article>
+    </div>
+
+    <section class="info-callout">
+      <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=700&q=80" alt="Passenger transit train on tracks">
+      <div class="info-text">
+        <h3>Visitor Transit Tips</h3>
+        <p>Southampton is easily accessible for weekend travelers arriving without a personal car:</p>
+        <ul>
+          <li><strong>Long Island Rail Road (LIRR):</strong> The Montauk Branch drops off directly at the Southampton Village station.</li>
+          <li><strong>Hampton Jitney:</strong> Daily express coach buses connect Manhattan directly to Southampton Main Street.</li>
+          <li><strong>Getting Around:</strong> The village core is highly walkable, with seasonal bike rentals available near the station.</li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Southampton Local Guide</p>
+    <p>&copy; 2026 Southampton Local Guide | Created for WEB 110</p>
   </footer>
 </body>
 </html>

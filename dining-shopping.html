@@ -8,23 +8,73 @@
 </head>
 <body>
   <header>
-    <h1>Southampton, NY</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="beaches-activities.html">Beaches & Activities</a></li>
-        <li><a href="dining-shopping.html">Dining & Shopping</a></li>
-      </ul>
-    </nav>
+    <div class="nav-container">
+      <div class="logo-area">
+        <h1>Southampton Guide</h1>
+        <p>The Hamptons, New York</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="beaches-activities.html">Beaches & Activities</a></li>
+          <li><a href="dining-shopping.html" class="active">Dining & Shopping</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h2>Dining & Village Strolls</h2>
-    <p>Discover bakeries, seafood spots, and boutique strolls along Main Street and Jobs Lane.</p>
+  <main class="container">
+    <section class="hero">
+      <h2>Village Dining & Boutiques</h2>
+      <p>Stroll tree-lined brick pathways through Southampton Village, home to historic bakeries, coastal seafood institutions, and refined storefronts along Main Street and Jobs Lane.</p>
+    </section>
+
+    <h2 class="section-title">Must-Visit Culinary & Shopping Stops</h2>
+    <div class="card-grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=700&q=80" alt="Fresh baked cookies and pastries in a bakery">
+        <div class="card-content">
+          <span class="badge">Bakery Legend</span>
+          <h3>Tate's Bake Shop</h3>
+          <p>The iconic original home of nationally acclaimed thin, crisp chocolate chip cookies, pies, and fresh fruit tarts on North Sea Road.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80" alt="Chic outdoor cafe dining terrace">
+        <div class="card-content">
+          <span class="badge">Italian Cafe</span>
+          <h3>Sant Ambroeus</h3>
+          <p>A sophisticated Milanese espresso bar and restaurant on Main Street, famous for artisanal gelato, fresh brioche, and patio people-watching.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&w=700&q=80" alt="Charming small boutique storefront with awnings">
+        <div class="card-content">
+          <span class="badge">Boutique Strolls</span>
+          <h3>Jobs Lane Boutiques</h3>
+          <p>Historic pedestrian corridor lined with indie clothing boutiques, coastal home design stores, and fine art galleries ending at Agawam Park.</p>
+        </div>
+      </article>
+    </div>
+
+    <section class="info-callout">
+      <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=700&q=80" alt="Fresh artisan bread loaf on a cutting board">
+      <div class="info-text">
+        <h3>Local Dining Etiquette & Timing</h3>
+        <p>Tips for planning meals during busy Hamptons weekends:</p>
+        <ul>
+          <li><strong>Dinner Reservations:</strong> Book 1–2 weeks in advance on OpenTable or Resy for prime Friday and Saturday evening slots.</li>
+          <li><strong>Casual Lunch:</strong> Many spots along Main Street offer grab-and-go sandwich lunches ideal for taking to the beach.</li>
+          <li><strong>Off-Peak Hours:</strong> Visiting bakeries like Tate's before 10:00 AM avoids long morning pastry queues.</li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Southampton Local Guide</p>
+    <p>&copy; 2026 Southampton Local Guide | Created for WEB 110</p>
   </footer>
 </body>
 </html>
