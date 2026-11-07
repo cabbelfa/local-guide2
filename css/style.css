@@ -1,4 +1,26 @@
 /* ============================================================
+   CHAPTER 10 CSS CUSTOM PROPERTIES (THEME VARIABLES)
+   ============================================================ */
+:root {
+  --primary-navy: #1e3a5f;
+  --secondary-navy: #2b3e50;
+  --accent-gold: #d4af37;
+  --nav-hover: #2c5282;
+  --bg-sand: #f7f9fa;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --card-border-alt: #cbd5e1;
+  --text-dark: #2b3e50;
+  --text-muted: #475569;
+  --text-light: #f1f5f9;
+  --hero-bg: #e2e8f0;
+  --footer-bg: #0f172a;
+  --footer-text: #94a3b8;
+  --shadow-subtle: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+  --shadow-elevated: 0 12px 20px -2px rgba(0, 0, 0, 0.14);
+}
+
+/* ============================================================
    GLOBAL STYLES & RESET
    ============================================================ */
 * {
@@ -10,8 +32,8 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.6;
-  color: #2b3e50;
-  background-color: #f7f9fa;
+  color: var(--text-dark);
+  background-color: var(--bg-sand);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -32,14 +54,27 @@ img {
   display: block;
 }
 
+/* Accessible Global Link States (Emily's Feedback) */
+a {
+  color: var(--primary-navy);
+  text-decoration: none;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 /* ============================================================
    HEADER & NAVIGATION (Flexbox)
    ============================================================ */
 header {
-  background-color: #1e3a5f; /* Coastal Deep Navy */
+  background-color: var(--primary-navy);
   color: #ffffff;
   padding: 1.25rem 5%;
-  border-bottom: 4px solid #d4af37; /* Sand/Gold Accent */
+  border-bottom: 4px solid var(--accent-gold);
 }
 
 .nav-container {
@@ -70,41 +105,43 @@ nav ul {
 }
 
 nav a {
-  color: #f1f5f9;
-  text-decoration: none;
+  color: var(--text-light);
   font-weight: 600;
   padding: 0.4rem 0.8rem;
   border-radius: 4px;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, text-decoration 0.2s ease;
 }
 
 nav a:hover,
+nav a:focus,
 nav a.active {
-  background-color: #2c5282;
+  background-color: var(--nav-hover);
   color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 /* ============================================================
    HERO / BANNER SECTION
    ============================================================ */
 .hero {
-  background-color: #e2e8f0;
+  background-color: var(--hero-bg);
   padding: 2.5rem 1.5rem;
   border-radius: 8px;
   margin-bottom: 2rem;
   text-align: center;
-  border-left: 5px solid #1e3a5f;
+  border-left: 5px solid var(--primary-navy);
 }
 
 .hero h2 {
   font-size: 2rem;
-  color: #1e3a5f;
+  color: var(--primary-navy);
   margin-bottom: 0.75rem;
 }
 
 .hero p {
   font-size: 1.1rem;
-  color: #475569;
+  color: var(--text-muted);
   max-width: 800px;
   margin: 0 auto;
 }
@@ -114,9 +151,9 @@ nav a.active {
    ============================================================ */
 .section-title {
   font-size: 1.5rem;
-  color: #1e3a5f;
+  color: var(--primary-navy);
   margin-bottom: 1.25rem;
-  border-bottom: 2px solid #e2e8f0;
+  border-bottom: 2px solid var(--card-border);
   padding-bottom: 0.5rem;
 }
 
@@ -127,15 +164,22 @@ nav a.active {
   margin-bottom: 2.5rem;
 }
 
+/* Interactive Card Styles (Lydia & Luc's Feedback) */
 .card {
   flex: 1 1 calc(33.333% - 1.5rem);
-  background-color: #ffffff;
+  background-color: var(--card-bg);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
-  border: 1px solid #e2e8f0;
+  box-shadow: var(--shadow-subtle);
+  border: 1px solid var(--card-border);
   display: flex;
   flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-elevated);
 }
 
 .card img {
@@ -153,15 +197,23 @@ nav a.active {
 
 .card-content h3 {
   font-size: 1.2rem;
-  color: #1e3a5f;
+  color: var(--primary-navy);
   margin-bottom: 0.5rem;
 }
 
 .card-content p {
   font-size: 0.95rem;
-  color: #475569;
+  color: var(--text-muted);
   margin-bottom: 1rem;
   flex-grow: 1;
+}
+
+/* Instructor's Baseline Alignment Rule */
+.card-content > a:last-child {
+  margin-top: auto;
+  align-self: flex-start;
+  font-weight: 600;
+  padding-top: 0.5rem;
 }
 
 .badge {
@@ -172,16 +224,16 @@ nav a.active {
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 4px;
-  background-color: #e2e8f0;
-  color: #1e3a5f;
+  background-color: var(--card-border);
+  color: var(--primary-navy);
 }
 
 /* Info Box / Side-by-Side Flex Callout */
 .info-callout {
   display: flex;
   gap: 1.5rem;
-  background-color: #ffffff;
-  border: 1px solid #cbd5e1;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border-alt);
   border-radius: 8px;
   padding: 1.5rem;
   align-items: center;
@@ -201,14 +253,14 @@ nav a.active {
 }
 
 .info-text h3 {
-  color: #1e3a5f;
+  color: var(--primary-navy);
   margin-bottom: 0.5rem;
 }
 
 .info-text ul {
   margin-left: 1.25rem;
   margin-top: 0.5rem;
-  color: #475569;
+  color: var(--text-muted);
 }
 
 /* ============================================================
@@ -216,8 +268,8 @@ nav a.active {
    ============================================================ */
 footer {
   margin-top: auto;
-  background-color: #0f172a;
-  color: #94a3b8;
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
   text-align: center;
   padding: 1.5rem 1rem;
   font-size: 0.9rem;
@@ -226,12 +278,20 @@ footer {
 /* ============================================================
    RESPONSIVE DESIGN (Media Queries)
    ============================================================ */
-@media (max-width: 850px) {
+
+/* Tablet Viewport (Emily, Lydia, and Luc's Feedback: Center 3rd Card) */
+@media (min-width: 601px) and (max-width: 850px) {
+  .card-grid {
+    justify-content: center;
+  }
+
   .card {
-    flex: 1 1 calc(50% - 1.5rem);
+    flex: 0 0 calc(50% - 1.5rem);
+    max-width: calc(50% - 1.5rem);
   }
 }
 
+/* Mobile Viewport */
 @media (max-width: 600px) {
   .nav-container {
     flex-direction: column;
